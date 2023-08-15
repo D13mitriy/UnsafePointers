@@ -2,9 +2,9 @@
 
 #include "Header.h"
 
- // Эта функция должна предоставить доступ к полю c объекта cls.
- // Обратите внимание, что возвращается ссылка на char, т. е.
- // доступ предоставляется на чтение и запись.
+ // This number of functions allow to access private variables of an object of class Cls. 
+ // Assuming we know the order of declaration of variables in the class.
+ // Read/write access is granted as the return value type is refference to a field (T&). 
 
 char& get_c(Cls& cls) {
 
@@ -12,9 +12,6 @@ char& get_c(Cls& cls) {
     return *c;
 }
 
-// Эта функция должна предоставить доступ к полю d объекта cls.
-// Обратите внимание, что возвращается ссылка на double, т. е.
-// доступ предоставляется на чтение и запись.
 double& get_d(Cls& cls) {
     
     double* ptr;
@@ -23,9 +20,6 @@ double& get_d(Cls& cls) {
 
 }
 
-// Эта функция должна предоставить доступ к полю i объекта cls.
-// Обратите внимание, что возвращается ссылка на int, т. е.
-// доступ предоставляется на чтение и запись.
 int& get_i(Cls& cls) {
     
     double* tmp = &get_d(cls);
